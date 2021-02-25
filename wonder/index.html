@@ -8,22 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <h2>marbet WonderMe Test</h2>
 
-    <div id="kaltura_player_124833804" style="width: 1120px;height: 790px"></div>
-    <script type="text/javascript" src="https://cdnapisec.kaltura.com/p/2075141/embedPlaykitJs/uiconf_id/46987963"></script>
-    <script type="text/javascript">
-    try {
-      var kalturaPlayer = KalturaPlayer.setup({
-        targetId: "kaltura_player_124833804",
-        provider: {
-          partnerId: 2075141,
-          uiConfId: 46987963
+    <script>
+      function setIframeHeight() {
+        var iFrameID = document.getElementById('iframe');
+        if(iFrameID) {
+          iFrameID.height = "";
+          iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
         }
-      });
-      kalturaPlayer.loadMedia({entryId: '1_yf6w1nab'});
-    } catch (e) {
-      console.error(e.message)
-    }
-  </script>
+      }
+      </script>
+      <iframe src="https://www.wonder.me/r?id=d3c6598a-ab64-4cc1-9b26-b30a80af0277" name="wonderme" id="wonderme" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100" width="100%" onload="setIframeHeight();">
+      </iframe>
 
 
 </body>
